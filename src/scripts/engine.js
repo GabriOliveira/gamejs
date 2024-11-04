@@ -7,11 +7,24 @@ const state = {
     },
     values:{
         timerId: null,
+        countDownTimerId: setInterval(countDown, 1000),
         gameVelocity: 1000,
         hitPosition: 0,
         result: 0,
+        curretTime: 60,
     }
 };
+
+function countDown(){
+    state.values.curretTime--;
+    state.view.timeLeft.textContent = state.values.curretTime;
+    if(state.values.curretTime <= 0){
+        clearInterval(state.values.countDownTimerId);
+        clearInterval(state.values.timerId);
+        alert("GAME OVER seu resultado foi de:" + state.values.result);
+        
+    }
+}
 
 function randomSquare(){
     state.view.squares.forEach((square)=>{
