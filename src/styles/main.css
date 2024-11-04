@@ -16,6 +16,16 @@
     border-bottom: 5px solid rgb(98, 0, 255);
 }
 
+#reload{
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+    color: #ffff;
+    background-color: #b50ee7;
+    border: none;
+    cursor: pointer;
+}
+
 
 .panel{
     margin-top: 1rem;
@@ -30,6 +40,7 @@
     border: 1px solid black;
     background-color: rgb(145, 4, 4);
 
+    cursor: pointer;
 }
 
 .enemy{
